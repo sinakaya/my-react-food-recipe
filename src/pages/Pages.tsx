@@ -9,10 +9,10 @@ function Pages() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/my-react-food-recipe" element={<Home />}></Route>
         <Route path="searched/:id" element={<Searched />}></Route>
         <Route path="cuisine/:type" element={<Cuisine />}></Route>
-        <Route path="recipe/:name" element={<Recipe />}></Route>
+        <Route path="/recipe/:name" element={<Recipe />}></Route>
 
         <Route path="*" element={<Errorfof />}></Route>
       </Routes>
