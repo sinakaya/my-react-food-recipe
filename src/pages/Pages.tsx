@@ -9,7 +9,7 @@ function Pages() {
   return (
     <div>
       <Routes>
-        <Route path="/my-react-food-recipe" element={<Home />}>
+        <Route path="/" element={<Home />}>
           <Route path="/searched/:id" element={<Searched />}></Route>
           <Route path="/cuisine/:type" element={<Cuisine />}></Route>
           <Route path="/recipe/:name" element={<Recipe />}></Route>
