@@ -39,7 +39,7 @@ function Veggie() {
               className="mx-auto my-3 max-w-sm rounded overflow-hidden shadow-lg"
             >
               <Link to={"/recipe/" + item.id}>
-                <img className="w-full" src={item.image} />
+                <img loading="lazy" className="w-full" src={item.image} />
               </Link>
 
               <div className="px-6 py-4">

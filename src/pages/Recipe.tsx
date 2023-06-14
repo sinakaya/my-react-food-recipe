@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 function Recipe() {
   const params = useParams().name;
   const [recipe, setRecipe]: any = useState("");
+  const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("instruction");
 
   useEffect(() => {
@@ -18,14 +19,21 @@ function Recipe() {
     );
     const data = await api.json();
     setRecipe(data);
+    setLoading(false);
   };
 
+  if (loading) <h1>loading...</h1>;
   return (
     <div className=" flex flex-col justify-between items-center mb-44">
       <h1 className="text-center text-4xl font-semibold my-10">
         {recipe.title}
       </h1>
-      <img className="mx-auto" src={recipe.image} alt={recipe.title} />
+      <img
+        loading="lazy"
+        className="mx-auto"
+        src={recipe.image}
+        alt={recipe.title}
+      />
       <button
         className={
           activeTab === "instruction"

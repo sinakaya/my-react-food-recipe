@@ -6,7 +6,12 @@ function Home() {
   return (
     <>
       <div className="mx-auto w-fit relative  mt-14">
-        <img className="rounded-4xl mx-auto " src={Victor} alt="" />
+        <img
+          loading="lazy"
+          className="rounded-4xl mx-auto "
+          src={Victor}
+          alt=""
+        />
         <div className="absolute top-3 left-3  md:top-1/4 md:left-10 ">
           <h3 className="text-pic-orange  font-semibold text-lg ">
             Best eating experience
