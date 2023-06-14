@@ -14,13 +14,13 @@ function NavBar() {
       <Search />
       <ul className="font-semibold text-nav-link fs- hidden  md:flex  md:w-48  md:justify-between ">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/my-react-food-recipe">Home</Link>
         </li>
         <li>
-          <Link to="/">Explore</Link>
+          <Link to="/my-react-food-recipe">Explore</Link>
         </li>
         <li>
-          <Link to="/">Help</Link>
+          <Link to="/my-react-food-recipe">Help</Link>
         </li>
       </ul>
       <div className="cursor-pointer w-fit h-fit md:hidden">
