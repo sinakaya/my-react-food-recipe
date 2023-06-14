@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { CiSearch } from "react-icons/Ci";
+import { AiOutlineSearch } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 function Search() {
@@ -16,8 +16,7 @@ function Search() {
       <div className="relative">
         <div className="flex h-full w-10 absolute top-0 right-0 bg-green-500">
           <button className="mx-auto my-auto">
-            {/* <CiSearch className="text-white" size={22} /> */}
-            search icon
+            <AiOutlineSearch className="text-white" size={22} />
           </button>
         </div>
         <input
