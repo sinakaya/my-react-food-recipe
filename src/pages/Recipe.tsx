@@ -22,7 +22,11 @@ function Recipe() {
     setLoading(false);
   };
 
-  if (loading) <h1>loading...</h1>;
+  if (loading) {
+    console.log("loading");
+
+    return <h1 className="text-3xl mx-auto font-semibold">loading...</h1>;
+  }
   return (
     <div className=" flex flex-col justify-between items-center mb-44">
       <h1 className="text-center text-4xl font-semibold my-10">

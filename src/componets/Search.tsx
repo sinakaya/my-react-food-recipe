@@ -8,7 +8,7 @@ function Search() {
 
   function submitHandler(e: any) {
     e.preventDefault();
-    navigate("/searched/" + input);
+    navigate("/my-react-food-recipe/searched/" + input);
     setInput("");
   }
   return (

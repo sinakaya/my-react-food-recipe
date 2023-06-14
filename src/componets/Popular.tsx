@@ -9,7 +9,7 @@ function Popular() {
   }, []);
 
   const getTrending = async () => {
-    const check = localStorage.getItem("popular");
+    const check = sessionStorage.getItem("popular");
 
     if (check) {
       setTrending(JSON.parse(check));
@@ -23,7 +23,7 @@ function Popular() {
       const data = await api.json();
       //console.log(typeof data.recipes);
       setTrending(data.recipes);
-      localStorage.setItem("popular", JSON.stringify(data.recipes));
+      sessionStorage.setItem("popular", JSON.stringify(data.recipes));
     }
   };
 
@@ -41,13 +41,15 @@ function Popular() {
               key={item.id}
               className="mx-auto my-3 max-w-sm rounded overflow-hidden shadow-lg"
             >
-              <Link to={"/recipe/" + item.id}>
+              <Link to={"/my-react-food-recipe/recipe/" + item.id}>
                 <img loading="lazy" className="w-full" src={item.image} />
               </Link>
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">
                   {" "}
-                  <Link to={"/recipe/" + item.id}>{item.title}</Link>
+                  <Link to={"/my-react-food-recipe/recipe/" + item.id}>
+                    {item.title}
+                  </Link>
                 </div>
               </div>
               <div className="px-6 pt-4 pb-2">
