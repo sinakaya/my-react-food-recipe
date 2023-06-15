@@ -23,9 +23,9 @@ function Recipe() {
   };
 
   if (loading) {
-    console.log("loading");
-
-    return <h1 className="text-3xl mx-auto font-semibold">loading...</h1>;
+    return (
+      <h1 className="text-3xl  text-center mt-20 font-medium">loading...</h1>
+    );
   }
   return (
     <div className=" flex flex-col justify-between items-center mb-44">

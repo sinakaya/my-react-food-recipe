@@ -21,10 +21,12 @@ function NavBar() {
           <Link to="/my-react-food-recipe">Home</Link>
         </li>
         <li>
-          <Link to="/my-react-food-recipe">Explore</Link>
+          <Link to="https://github.com/sinakaya/my-react-food-recipe">
+            Github
+          </Link>
         </li>
         <li>
-          <Link to="/my-react-food-recipe">Help</Link>
+          <Link to="https://sinakaya.github.io/my-portfolio-react/">About</Link>
         </li>
       </ul>
       <div
