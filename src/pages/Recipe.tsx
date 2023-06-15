@@ -42,7 +42,7 @@ function Recipe() {
         className={
           activeTab === "instruction"
             ? "hidden"
-            : "py-5 px-10 bg-nav-link rounded-md my-10 w"
+            : "py-5 px-10 bg-slate-400 rounded-md my-10 w"
         }
         onClick={() => setActiveTab("instruction")}
       >
@@ -52,7 +52,7 @@ function Recipe() {
         className={
           activeTab === "ingredients"
             ? "hidden"
-            : "py-5 px-10 bg-nav-link rounded-md my-10 text-center"
+            : "py-5 px-10 bg-slate-400 rounded-md my-10 text-center"
         }
         onClick={() => setActiveTab("ingredients")}
       >
