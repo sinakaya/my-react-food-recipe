@@ -1,6 +1,7 @@
 import Popular from "../componets/Popular";
 import Veggie from "../componets/Veggie";
 import Victor from "../images/main-pic.jpg";
+import Cuisine from "../componets/Cuisine";
 
 function Home() {
   return (
@@ -24,7 +25,7 @@ function Home() {
           </h3>
         </div>
       </div>
-
+      <Cuisine />
       <Popular />
       <Veggie />
     </>

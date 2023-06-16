@@ -3,24 +3,25 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function Searched() {
-  const params = useParams().id;
-  const [searched, setSearched] = useState([]);
+function Category() {
+  const params = useParams().type;
+  console.log(params);
+  const [category, setCategory] = useState([]);
   //ex : cookie
 
   useEffect(() => {
-    getSearched();
+    getCategory();
   }, [params]);
 
-  const getSearched = async () => {
+  const getCategory = async () => {
     try {
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
           import.meta.env.VITE_SOME_KEY
-        }&query=${params}`
+        }&cuisine=${params}`
       );
 
-      setSearched(response.data.results);
+      setCategory(response.data.results);
     } catch (error) {
       console.error(error);
     }
@@ -31,7 +32,7 @@ function Searched() {
         {params} Recipes
       </h1>
       <div className=" grid md:grid-cols-2 lg:grid-cols-3">
-        {searched.map((item: any) => {
+        {category.map((item: any) => {
           return (
             <div
               key={item.id}
@@ -55,4 +56,4 @@ function Searched() {
   );
 }
 
-export default Searched;
+export default Category;
