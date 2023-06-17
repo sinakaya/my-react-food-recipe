@@ -49,9 +49,11 @@ function NavBar() {
             <li>
               <Link to="/my-react-food-recipe">Home</Link>
             </li>
+            <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 "></hr>
             <li>
               <Link to="/my-react-food-recipe">Explore</Link>
             </li>
+            <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 "></hr>
             <li>
               <Link to="/my-react-food-recipe">Help</Link>
             </li>
