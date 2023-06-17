@@ -1,7 +1,7 @@
-# my-react-food-recipe
-To run dev project after donwloading 
-run the npm install 
-to install the dependency 
-and run dthe command
-npm run dev
-to run the dev server
+## Getting started
+
+To get the frontend running locally:
+
+- Clone this repo
+- `npm install` to install all req'd dependencies
+- `npm run dev` to start the local server (this project Vite)
