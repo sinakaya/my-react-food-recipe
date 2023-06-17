@@ -14,7 +14,7 @@ function Search() {
   return (
     <form onSubmit={submitHandler}>
       <div className="relative">
-        <div className="flex h-full w-10 absolute top-0 right-0 bg-green-500">
+        <div className="flex h-full w-10 absolute top-0 right-0 bg-[#84BD00] ">
           <button className="mx-auto my-auto">
             <AiOutlineSearch className="text-white" size={22} />
           </button>
