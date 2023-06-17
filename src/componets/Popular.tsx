@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Popular() {
   const [trending, setTrending] = useState([]);
@@ -10,22 +11,44 @@ function Popular() {
 
   const getTrending = async () => {
     const check = sessionStorage.getItem("popular");
-
     if (check) {
       setTrending(JSON.parse(check));
     } else {
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${
-          import.meta.env.VITE_SOME_KEY
-        }&number=8`
-      );
-
-      const data = await api.json();
-      //console.log(typeof data.recipes);
-      setTrending(data.recipes);
-      sessionStorage.setItem("popular", JSON.stringify(data.recipes));
+      try {
+        const response = await axios.get(
+          `https://api.spoonacular.com/recipes/random?apiKey=${
+            import.meta.env.VITE_SOME_KEY
+          }&number=8`
+        );
+        setTrending(response.data.recipes);
+        sessionStorage.setItem(
+          "popular",
+          JSON.stringify(response.data.recipes)
+        );
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
+
+  // const getTrending = async () => {
+  //   const check = sessionStorage.getItem("popular");
+
+  //   if (check) {
+  //     setTrending(JSON.parse(check));
+  //   } else {
+  // const api = await fetch(
+  //   `https://api.spoonacular.com/recipes/random?apiKey=${
+  //     import.meta.env.VITE_SOME_KEY
+  //   }&number=8`
+  // );
+
+  //     const data = await api.json();
+  //     //console.log(typeof data.recipes);
+  //     setTrending(data.recipes);
+  //     sessionStorage.setItem("popular", JSON.stringify(data.recipes));
+  //   }
+  // };
 
   return (
     <>

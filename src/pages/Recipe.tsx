@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function Recipe() {
   const params = useParams().name;
@@ -12,13 +13,13 @@ function Recipe() {
   }, []);
 
   const getRecipe = async () => {
-    const api = await fetch(
+    const response = await axios.get(
       `https://api.spoonacular.com/recipes/${params}/information?apiKey=${
         import.meta.env.VITE_SOME_KEY
       }`
     );
-    const data = await api.json();
-    setRecipe(data);
+
+    setRecipe(response.data);
     setLoading(false);
   };
 

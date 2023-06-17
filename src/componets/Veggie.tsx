@@ -1,28 +1,30 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Veggie() {
   const [veggie, setVeggie] = useState([]);
 
   useEffect(() => {
-    getTrending();
+    getVeggie();
   }, []);
 
-  const getTrending = async () => {
+  const getVeggie = async () => {
     const check = sessionStorage.getItem("veggie");
-
     if (check) {
       setVeggie(JSON.parse(check));
     } else {
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${
-          import.meta.env.VITE_SOME_KEY
-        }&number=8&tags=vegetarian`
-      );
-
-      const data = await api.json();
-      setVeggie(data.recipes);
-      sessionStorage.setItem("veggie", JSON.stringify(data.recipes));
+      try {
+        const response = await axios.get(
+          `https://api.spoonacular.com/recipes/random?apiKey=${
+            import.meta.env.VITE_SOME_KEY
+          }&number=8&tags=vegetarian`
+        );
+        setVeggie(response.data.recipes);
+        sessionStorage.setItem("veggie", JSON.stringify(response.data.recipes));
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
