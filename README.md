@@ -11,7 +11,7 @@ This is a Food Recipe website created with React. It provides a platform for use
 
 ## Installation
 1.Clone the repository:
-git clone https://github.com/your-username/food-recipe-website.git
+git clone https://github.com/khaninejad/food-recipe-website.git
 
 2.Install dependencies:
 npm install
