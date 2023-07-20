@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 function Search() {
-  const inputRef = useRef<HTMLInputElement>("");
+  const inputRef: any = useRef();
   const navigate = useNavigate();
 
   function submitHandler(e: any) {
