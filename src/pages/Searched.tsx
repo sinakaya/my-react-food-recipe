@@ -37,7 +37,7 @@ function Searched() {
               key={item.id}
               className="mx-auto my-3 max-w-sm rounded overflow-hidden shadow-lg"
             >
-              <Link to={"/my-react-food-recipe/recipe/" + item.id}>
+              <Link to={"/react-food-recipe/recipe/" + item.id}>
                 <img loading="lazy" className="w-full" src={item.image} />
               </Link>
 

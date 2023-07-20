@@ -25,32 +25,32 @@ function Cuisine() {
     <div className="mt-16 text-white">
       <Carousel arrows={false} responsive={responsive}>
         <button className="w-72 h-44 bg-[#F6784C] rounded-md">
-          <a href="/my-react-food-recipe/category/french">French</a>
+          <a href="/react-food-recipe/category/french">French</a>
         </button>
         <button className="w-72 h-44 bg-[#C4D600] rounded-md">
-          <a href="/my-react-food-recipe/category/greek">Greek</a>
+          <a href="/react-food-recipe/category/greek">Greek</a>
         </button>
         <button className="w-72 h-44 bg-[#EAAA00] rounded-md">
-          <a href="/my-react-food-recipe/category/italian">Italian</a>
+          <a href="/react-food-recipe/category/italian">Italian</a>
         </button>
         <button className="w-72 h-44 bg-[#ED8B00] rounded-md">
-          <a href="/my-react-food-recipe/category/middle%20eastern">
+          <a href="/react-food-recipe/category/middle%20eastern">
             Middle Eastern
           </a>
         </button>
         <button className="w-72 h-44 bg-[#84BD00] rounded-md">
           <a
             className="w-full h-full"
-            href="/my-react-food-recipe/category/latin%20american"
+            href="/react-food-recipe/category/latin%20american"
           >
             Latin American
           </a>
         </button>
         <button className="w-72 h-44 bg-[#F6784C] rounded-md">
-          <a href="/my-react-food-recipe/category/chinese">Chinese</a>
+          <a href="/react-food-recipe/category/chinese">Chinese</a>
         </button>
         <button className="w-72 h-44 bg-[#C4D600] rounded-md">
-          <a href="/my-react-food-recipe/category/indian">Indian</a>
+          <a href="/react-food-recipe/category/indian">Indian</a>
         </button>
       </Carousel>
     </div>

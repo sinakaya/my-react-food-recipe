@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         "nav-link": "#253D4E",
+        "logo-primary": "#2A3342",
         "nav-active": "#509E2F",
         "pic-orange": "#DC582A",
       },

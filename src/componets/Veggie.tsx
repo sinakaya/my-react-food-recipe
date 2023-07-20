@@ -40,13 +40,13 @@ function Veggie() {
               key={item.id}
               className="mx-auto my-3 max-w-sm rounded overflow-hidden shadow-lg"
             >
-              <Link to={"/my-react-food-recipe/recipe/" + item.id}>
+              <Link to={"/react-food-recipe/recipe/" + item.id}>
                 <img loading="lazy" className="w-full" src={item.image} />
               </Link>
 
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">
-                  <Link to={"/my-react-food-recipe/recipe/" + item.id}>
+                  <Link to={"/react-food-recipe/recipe/" + item.id}>
                     {item.title}
                   </Link>
                 </div>
